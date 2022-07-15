@@ -72,7 +72,7 @@ from __future__ import print_function
 import collections
 
 
-class OrderedSet(collections.MutableSet):
+class OrderedSet(collections.abc.MutableSet):
 
     """A light weight OrderedSet data type pure Python implementation.
     """
