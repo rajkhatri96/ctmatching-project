@@ -113,7 +113,7 @@ def stratified_matching(control, treatment, stratify_order):
     for chunk in zip(*distmatrix_list):
         df = pd.DataFrame(np.array(chunk).T)
         nn_index.append(
-            df.sort(columns=list(range(len(stratify_order)))).index.values)
+            df.sort_values(by=list(range(len(stratify_order)))).index.values)
 
     nn_index = np.array(nn_index)
 
